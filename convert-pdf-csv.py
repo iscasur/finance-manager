@@ -1,6 +1,6 @@
 import tabula
 
-MONTH = '04'
+MONTH = '05'
 YEAR = '2023'
 DIR_INPUT = 'bankStatements/nu/pdf'
 DIR_OUTPUT = 'bankStatements/nu/csv'

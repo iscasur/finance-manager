@@ -3,7 +3,7 @@ import gspread
 import time
 
 ## Change month/year
-MONTH = '01'
+MONTH = '05'
 YEAR = '2023'
 
 ## First, you have to convert PDF - CSV
@@ -17,7 +17,7 @@ def nuFin(file):
     for row in csv_reader:
       date = row[0][0:2] + f"/{MONTH}/{YEAR}"
       name = row[3]
-      amount = float(row[4])
+      amount = float(row[4].replace("$", "").replace(",", "").replace(" ", ""))
       category = row[2]
       if "Restaurante" in category:
         category = "Consumo"
